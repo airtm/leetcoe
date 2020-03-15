@@ -1,14 +1,6 @@
 package myTest;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentHashMap;
-
 import pojo.ListNode;
-import pojo.TreeNode;
 
 //两数相加
 class Solution_27 {

@@ -7,14 +7,14 @@
 4翻转二叉树				https://leetcode-cn.com/problems/invert-binary-tree/
 5x的平方根				https://leetcode-cn.com/problems/merge-two-binary-trees/ 
 6跳跃游戏II				https://leetcode-cn.com/problems/jump-game-ii/?from=groupmessage&isappinstalled=0  
-7二叉树最大深度			https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/    
+7二叉树最大深度			https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/    //遍历记录深度 
 8多树最大深度			https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/    
-9对称二叉树				https://leetcode-cn.com/problems/symmetric-tree/     
+9对称二叉树				https://leetcode-cn.com/problems/symmetric-tree/     遍历树 熟悉树结构
 10平衡二叉树				https://leetcode-cn.com/problems/balanced-binary-tree/   
 11二叉树的直径			https://leetcode-cn.com/problems/diameter-of-binary-tree/
 12二叉树的堂兄弟节点      https://leetcode-cn.com/problems/cousins-in-binary-tree/
 13修剪二叉搜索树			https://leetcode-cn.com/problems/trim-a-binary-search-tree/
-14二叉树的右视图  		https://leetcode-cn.com/problems/binary-tree-right-side-view/
+14二叉树的右视图  		https://leetcode-cn.com/problems/binary-tree-right-side-view/ 遍历数找层级
 15二叉树剪枝				https://leetcode-cn.com/problems/binary-tree-pruning/
 16二叉树的最近公共祖先	https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
 17路径总和II				https://leetcode-cn.com/problems/path-sum-ii/
@@ -37,3 +37,5 @@
 33删除链表的倒数第N个节点 https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
 34从链表中删去总和值为零的连续节点 https://leetcode-cn.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 35提莫攻击			https://leetcode-cn.com/problems/teemo-attacking/submissions/	
+
+36最小覆盖子串        https://leetcode-cn.com/problems/minimum-window-substring/

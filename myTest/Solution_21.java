@@ -1,11 +1,8 @@
 package myTest;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.UUID;
 
 import pojo.ListNode;
-import pojo.TreeNode;
 
 //移除链表元素
 class Solution_21 {

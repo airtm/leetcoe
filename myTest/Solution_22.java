@@ -1,11 +1,8 @@
 package myTest;
 
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
 
 import pojo.ListNode;
-import pojo.TreeNode;
 
 //环形链表
 class Solution_22 {
