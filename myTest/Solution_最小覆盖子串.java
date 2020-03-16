@@ -1,11 +1,9 @@
 package myTest;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-class Solution {
+class Solution_最小覆盖子串 {
 //    String S = "ADOBECODEBANC", T = "ABC";
 // "aaaaaaaaaaaabbbbbcdd"
 //"abcdd"
@@ -15,20 +13,43 @@ class Solution {
         T = "bc";
 		System.out.println(minWindow(S,T));
 	}
-	
-    public String minWindow(String s, String t) {
-    	
-    	
-		return t;
+    /**
+     * 记录每次左指针的位置key=0和下次左指针开始的位置key=1
+     */
+    static  Map<Integer,Integer> startMap = new HashMap<>(2);
 
+    public static String minWindow(String s, String t) {
+        if (t.length() > s.length()) {
+            return "";
+        }
+        char[] chars = s.toCharArray();
+        String resultMap = null;
+        startMap.put(1, 0);
+        //如果剩下的字符串长度已经小于目标串 则结束
+        while (startMap.get(1) <= chars.length - t.length()) {
+            Integer last = startMap.get(1);
+            resultMap = forChars(chars, t, startMap.get(1), resultMap, s);
+            //如果上次的位置和下次的位置重合则加1，防止死循环
+            if (last.equals(startMap.get(1))) {
+                startMap.put(1, last + 1);
+            }
+            //第一次最长的都为空 表明不存在
+            if (resultMap == null) {
+                return "";
+            }
+            //如果找到一个长度相等的串了，肯定就是最小了
+            if (resultMap.length() == t.length()) {
+                return resultMap;
+            }
+        }
+        return resultMap;
     }
-
-	private static String forChars(char[] chars, String t, Integer start, String result, String s) {
+    private static String forChars(char[] chars, String t, Integer start, String result, String s) {
         String tt = t;
         int a = 0;
         int length = chars.length;
         if(result != null){
-            length = Math.min(result.length() + start,chars.length);
+            length = Math.min(result.length() + start,chars.length) ;
         }
         for (int i = start; i < length; i++) {
             char aChar = chars[i];
@@ -36,17 +57,19 @@ class Solution {
                 continue;
             }
             a++;
-            if(a==1){
-                start1.put(0,i);
+            if(a == 1){
+                startMap.put(0,i);
             }
             if(a == 2){
-                start1.put(1,i);
+                startMap.put(1,i);
             }
+            //在目标串中找到一个则去掉一个
             if(t.indexOf(aChar)!=-1){
                 t = t.substring(0, t.indexOf(aChar)) + t.substring(t.indexOf(aChar)+1);
             }
+            //去除空了，表明找到了，记录最小的返回
             if(t.isEmpty()) {
-                String string = s.substring(start1.get(0), i + 1);
+                String string = s.substring(startMap.get(0), i + 1);
                 if(result == null){
                     result = string;
                 }
@@ -54,9 +77,9 @@ class Solution {
             }
         }
         return result;
-	}
+    }
 
-
+        //官方题解
         public String minWindow1(String s, String t) {
 
             if (s.length() == 0 || t.length() == 0) {

@@ -102,8 +102,8 @@ class Solution_7最大深度 {
 		}
 
 
-//	时间空间复杂度为 O(N)O(N)
-//	class Solution {迭代记录深度
+//	时间空间复杂度为 O(N) O(N)
+//	class Solution_官方题解 {迭代记录深度
 //		public int maxDepth(TreeNode root) {
 //			Queue<Pair<TreeNode, Integer>> stack = new LinkedList<>();
 //			if (root != null) {

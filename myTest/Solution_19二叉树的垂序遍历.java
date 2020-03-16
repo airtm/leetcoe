@@ -131,7 +131,7 @@ class Solution_19二叉树的垂序遍历 {
 		}
 	}
 
-//	class Solution {记录坐标 排序输出
+//	class Solution_官方题解 {记录坐标 排序输出
 //		List<Location> locations;
 //		public List<List<Integer>> verticalTraversal(TreeNode root) {
 //			// Each location is a node's x position, y position, and value
