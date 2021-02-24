@@ -3,6 +3,9 @@ package myTest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+* 最小覆盖子串
+*/
 class Solution_最小覆盖子串 {
 //    String S = "ADOBECODEBANC", T = "ABC";
 // "aaaaaaaaaaaabbbbbcdd"
